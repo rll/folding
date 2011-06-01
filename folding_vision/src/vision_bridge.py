@@ -9,13 +9,14 @@ from geometry_msgs.msg import PointStamped
 from numpy import *
 from folding_vision.srv import *
 from folding_srvs.srv import *
-import Models
+from clothing_models import Models
 import pickle
 import image_geometry
 from image_processor.srv import *
 from sensor_msgs.msg import CameraInfo
-from visual_feedback_utils import TopicUtils
 import StanceUtils
+from rll_utils import RosUtils
+
 
 ## This adds visual feedback to the folding procedure, providing services to determine the cloth polygon,
 #  and adjust fold lines to match the observed ones. Currently made to interface with the FoldingGUI,
@@ -52,7 +53,7 @@ class VisionBridgeNode:
         StanceUtils.call_stance("viewing",5.0)
         last_model = pickle.load(open("/tmp/last_model.pickle"))
         camera_model = image_geometry.PinholeCameraModel()
-        info = TopicUtils.get_next_message("wide_stereo/left/camera_info",CameraInfo)
+        info = RosUtils.get_next_message("wide_stereo/left/camera_info",CameraInfo)
         cam_frame = info.header.frame_id
         camera_model.fromCameraInfo(info)
         now = rospy.Time.now()

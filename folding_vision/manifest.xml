@@ -10,13 +10,12 @@
   <url>http://ros.org/wiki/folding_vision</url>
   <depend package="image_processor"/>
   <depend package="rospy"/>
-  <depend package="visual_feedback_utils"/>
-  <depend package="passive_shape"/>
   <depend package="image_geometry"/>
+  <depend package="clothing_models"/>
   <depend package="geometry_msgs"/>
   <depend package="sensor_msgs"/>
   <depend package="pr2_simple_motions_apps"/>
-
+  <depends package="rll_utils"/>
 </package>
 
 
