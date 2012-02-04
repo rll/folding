@@ -10,7 +10,7 @@
   <url>http://ros.org/wiki/folding_srvs</url>
   <depend package="folding_msgs"/>
   <depend package="geometry_msgs"/>
-  <depend package="geometric_shapes_msgs"/>
+  <depend package="arm_navigation_msgs"/>
 </package>
 
 

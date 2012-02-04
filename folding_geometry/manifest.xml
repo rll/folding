@@ -11,7 +11,7 @@
   <depend package="rospy"/>
   <depend package="shape_window"/>
   <depend package="geometry_msgs"/>
-  <depend package="geometric_shapes_msgs"/>
+  <depend package="arm_navigation_msgs"/>
   <depend package="tf"/>
   <depend package="folding_msgs"/>
   <depend package="folding_srvs"/>

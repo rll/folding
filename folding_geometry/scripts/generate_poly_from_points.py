@@ -3,7 +3,7 @@ import roslib
 roslib.load_manifest("folding_geometry")
 import rospy
 import sys
-from geometry_msgs.msg import PointStamped
+from arm_navigation_msgs.msg import PointStamped
 from folding_msgs.msg import PolyStamped,Point2D
 from numpy import *
 import time

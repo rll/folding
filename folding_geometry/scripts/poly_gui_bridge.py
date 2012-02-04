@@ -3,7 +3,7 @@ import roslib
 roslib.load_manifest("folding_geometry")
 import rospy
 import sys
-from geometry_msgs.msg import PointStamped,PoseStamped
+from arm_navigation_msgs.msg import PointStamped,PoseStamped
 from geometric_shapes_msgs.msg import Shape as GeometricShape
 from folding_msgs.msg import PolyStamped,Point2D,FoldTraj
 from folding_srvs.srv import *
