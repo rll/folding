@@ -17,8 +17,8 @@
     <node pkg="image_processor" type="shape_fitter_node.py" name="shape_fitter_node" output="screen" >
         <param name="mono_converter" value="mono_converter_node" />
         <param name="stereo_converter" value="stereo_converter_node" />
-        <param name="save_dir" value="/home/mcai/models"/>
-        <param name="load_dir" value="/home/mcai/models"/>
+        <param name="save_dir" value="$(find visual_feedback_utils)/models"/>
+        <param name="load_dir" value="$(find visual_feedback_utils)/models"/>
         <param name="model" value="sweater_model_less_restricted" />
         <param name="transform" value="false" />
         <param name="mode" value="sweater" />
@@ -28,8 +28,8 @@
     <node pkg="image_processor" type="shape_fitter_node.py" name="fold_finder_node" output="screen" >
         <param name="mono_converter" value="mono_converter_node" />
         <param name="stereo_converter" value="stereo_converter_node" />
-        <param name="save_dir" value="/home/mcai/models"/>
-        <param name="load_dir" value="/home/mcai/models"/>
+        <param name="save_dir" value="$(find visual_feedback_utils)/models"/>
+        <param name="load_dir" value="$(find visual_feedback_utils)/models"/>
         <param name="model" value="next_model" />
         <param name="transform" value="false" />
         <param name="mode" value="folded" />
